@@ -31,7 +31,7 @@ func writeMemo(memo string, path string) {
 	bar := "====================" + time.Now().Format("2006-01-02T15:04:05Z07:00") + "====================\n"
 	session := bar + memo + "\n\n\n"
 
-	f, err := os.OpenFile(path, os.O_WRONLY|os.O_APPEND|os.O_CREATE, 0666)
+	f, err := os.OpenFile(path, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0666)
 	if err != nil {
 		fmt.Println(err)
 	}
